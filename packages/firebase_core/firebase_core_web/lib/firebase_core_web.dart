@@ -27,6 +27,7 @@ class FirebaseCoreWeb extends FirebaseCorePlatform {
   Future<PlatformFirebaseApp> appNamed(String name) async {
     try {
       final App jsApp = firebase.app(name);
+      if (jsApp == null) return null;
       return _createFromJsApp(jsApp);
     } catch (e) {
       if (_isFirebaseError(e)) {

@@ -37,6 +37,7 @@ void main() {
     });
 
     test('configure() calls firebase.initializeApp', () async {
+      js.context['firebase']['app'] = js.allowInterop((String name) => null);
       js.context['firebase']['initializeApp'] =
           js.allowInterop((js.JsObject options, String name) {
         return js.JsObject.jsify(<String, dynamic>{
