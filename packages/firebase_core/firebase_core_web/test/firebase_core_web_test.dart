@@ -11,8 +11,6 @@ import 'package:firebase_core_web/firebase_core_web.dart';
 import 'package:firebase_core_platform_interface/firebase_core_platform_interface.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'utils.dart';
-
 void main() {
   group('$FirebaseCoreWeb', () {
     setUp(() async {
